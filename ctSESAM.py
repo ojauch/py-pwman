@@ -29,17 +29,26 @@ parser.add_argument("-p", "--print", help="prints generated password to command 
 parser.add_argument("-c", "--copy", help="copies generated password to clipboard (default)",
 					action="store_true")
 parser.add_argument("-t", "--time", help="set time the password is stored in clipboard (default=12s)", type=int)
+parser.add_argument("-mp", "--master_password", help="provide master password to generate password", type=str)
+parser.add_argument("-d", "--domain", help="provide domain name to generate password", type=str)
 args = parser.parse_args()
 
 if args.time:
 	paste_time = args.time
 	print(paste_time)
 
-master_password = getpass('Masterpasswort: ')
-domain = input('Domain: ')
-while len(domain) < 1:
-	print('Bitte gib eine Domain an.')
-	domain = input('Domain: ')
+if args.master_password != "":
+	master_password = args.master_password
+else:
+	master_password = getpass('master password: ')
+
+if args.domain != "":
+	domain = args.domain
+else:
+	domain = input('domain: ')
+	while len(domain) < 1:
+		print('Please provide a domain name.')
+		domain = input('domain: ')
 
 hash_string = domain + master_password
 hash_string_bytes = hash_string.encode('utf-8')
@@ -52,7 +61,7 @@ hashed_bytes = pbkdf2_hmac(
 	4096)
 
 if args.print:
-	print('Passwort: ' + convert_bytes_to_password(hashed_bytes, 10))
+	print('password: ' + convert_bytes_to_password(hashed_bytes, 10))
 else:
 	pyperclip.copy(convert_bytes_to_password(hashed_bytes, 10))
 	print("Paste your password")
