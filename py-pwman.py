@@ -37,12 +37,12 @@ if args.time:
 	paste_time = args.time
 	print(paste_time)
 
-if args.master_password != "":
+if args.master_password:
 	master_password = args.master_password
 else:
 	master_password = getpass('master password: ')
 
-if args.domain != "":
+if args.domain:
 	domain = args.domain
 else:
 	domain = input('domain: ')
