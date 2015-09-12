@@ -29,6 +29,7 @@ def main():
 	salt = 'pepper'
 	paste_time = 12
 	iterations = 4096
+	pw_length = 10
 
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-p", "--print", help="prints generated password to command line",
@@ -50,6 +51,9 @@ def main():
 	parser.add_argument("-s", "--salt",
 						help="set salt",
 						type=str)
+	parser.add_argument("-l", "--length",
+						help="set password length",
+						type=int)
 	args = parser.parse_args()
 
 	if args.time:
@@ -72,6 +76,9 @@ def main():
 	if args.iterations:
 		iterations = args.iterations
 
+	if args.length:
+		pw_length = args.length
+
 	hash_string = domain + master_password
 	hash_string_bytes = hash_string.encode('utf-8')
 	salt = 'pepper'
@@ -83,9 +90,9 @@ def main():
 		iterations)
 
 	if args.print:
-		print('password: ' + convert_bytes_to_password(hashed_bytes, 10))
+		print('password: ' + convert_bytes_to_password(hashed_bytes, pw_length))
 	else:
-		pyperclip.copy(convert_bytes_to_password(hashed_bytes, 10))
+		pyperclip.copy(convert_bytes_to_password(hashed_bytes, pw_length))
 		print("Paste your password")
 		time.sleep(paste_time)
 		pyperclip.copy("")

@@ -7,7 +7,7 @@ The tool generates from a master password and a domain name a unique password fo
 Usage
 
 pwman [-h] [-p] [-c] [-t TIME] [-mp MASTER_PASSWORD] [-d DOMAIN]
-      [-i ITERATIONS] [-s SALT]
+      [-i ITERATIONS] [-s SALT] [-i ITERATIONS] [-s SALT] [-l LENGTH]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -23,3 +23,5 @@ optional arguments:
                         set how many times the hash algorithm iterates over
                         the password string
   -s SALT, --salt SALT  set salt
+  -l LENGTH, --length LENGTH
+                        set password length
