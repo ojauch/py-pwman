@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>py-pwman by ossi96</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>py-pwman</h1>
+        <h2>This is the command line Python version of the c&#39;t password manager.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/ossi96/py-pwman/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/ossi96/py-pwman/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/ossi96/py-pwman" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="py-pwman" class="anchor" href="#py-pwman" aria-hidden="true"><span class="octicon octicon-link"></span></a>py-pwman</h1>
+
+<p>This is a modified command line Python version of the c't password manager.</p>
+
+<p>The tool generates from a master password and a domain name a unique password for each service.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>python3 py-pwman.py [-h] [-p] [-c] [-t TIME] [-mp MASTER_PASSWORD] [-d DOMAIN]
+[-i ITERATIONS] [-s SALT] [-l LENGTH]</p>
+
+<p>optional arguments:
+  -h, --help            show help message and exit</p>
+
+<p>-p, --print           prints generated password to command line</p>
+
+<p>-c, --copy            copies generated password to clipboard (default)</p>
+
+<p>-t TIME, --time TIME  set time the password is stored in clipboard (default=12s)</p>
+
+<p>-mp MASTER_PASSWORD, --master_password MASTER_PASSWORD provide master password to generate password</p>
+
+<p>-d DOMAIN, --domain DOMAIN provide domain name to generate password</p>
+
+<p>-i ITERATIONS, --iterations ITERATIONS
+                        set how many times the hash algorithm iterates over
+                        the password string</p>
+
+<p>-s SALT, --salt SALT  set salt</p>
+
+<p>-l LENGTH, --length LENGTH
+                        set password length</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
