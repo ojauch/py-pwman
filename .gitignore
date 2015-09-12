@@ -1,2 +1,7 @@
 
 *.pyc
+py_pwman.egg-info/
+build/
+dist/
+pwman/__pycache__/
+pyperclip/__pycache__/
