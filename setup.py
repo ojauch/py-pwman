@@ -12,7 +12,7 @@ version = re.search(
 ).group(1)
 
 with open("README.rst", "rb") as f:
-    long_descr = f.read().decode("uft-8")
+    long_descr = f.read().decode("utf-8")
 
 setup(
     name = "py-pwman",
@@ -25,5 +25,7 @@ setup(
     long_description = long_descr,
     author = "Oskar Jauch",
     author_email = "oskar.jauch@gmail.com",
-    url = "https://github.com/ossi96/py-pwman"
-)
+    url = "https://github.com/ossi96/py-pwman",
+    install_requires = [
+        'pyperclip',
+    ])

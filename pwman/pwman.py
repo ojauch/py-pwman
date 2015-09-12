@@ -6,7 +6,7 @@
 __version__ = "0.1"
 
 from hashlib import pbkdf2_hmac
-import pyperclip.pyperclip
+from pyperclip import pyperclip
 import time
 import argparse
 from getpass import getpass
@@ -17,7 +17,7 @@ def convert_bytes_to_password(hashed_bytes, length):
 	numbers = list('0123456789')
 	special_characters = list('#!"§$%&/()[]{}=-_+*<>;:.')
 	password_characters = lower_case_letters + upper_case_letters + numbers + special_characters
-	
+
 	number = int.from_bytes(hashed_bytes, byteorder='big')
 	password = ""
 	while number > 0 and len(password) < length:
