@@ -1,4 +1,4 @@
-# py-pwman
+# Python Password Manager
 This is a modified command line Python version of the c't password manager.
 
 The tool generates from a master password and a domain name a unique password for each service.
