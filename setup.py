@@ -17,6 +17,7 @@ with open("README.rst", "rb") as f:
 setup(
     name = "py-pwman",
     packages = ["pwman"],
+    package_data={"pwman": ["locale/*/LC_MESSAGES/*"]},
     entry_points = {
         "console_scripts": ['pwman = pwman.pwman:main']
         },

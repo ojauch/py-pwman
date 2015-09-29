@@ -10,6 +10,7 @@ from pyperclip import pyperclip
 import time
 import argparse
 from getpass import getpass
+import gettext
 
 def convert_bytes_to_password(hashed_bytes, length):
 	lower_case_letters = list('abcdefghijklmnopqrstuvwxyz')
@@ -31,28 +32,30 @@ def main():
 	iterations = 4096
 	pw_length = 10
 
+	gettext.install('pwman', 'locale')
+
 	parser = argparse.ArgumentParser()
-	parser.add_argument("-p", "--print", help="prints generated password to command line",
+	parser.add_argument("-p", "--print", help=_("prints generated password to command line"),
 						action="store_true")
-	parser.add_argument("-c", "--copy", help="copies generated password to clipboard (default)",
+	parser.add_argument("-c", "--copy", help=_("copies generated password to clipboard (default)"),
 						action="store_true")
 	parser.add_argument("-t", "--time",
-						help="set time the password is stored in clipboard (default=12s)",
+						help=_("set time the password is stored in clipboard (default=12s)"),
 						type=int)
 	parser.add_argument("-mp", "--master_password",
-						help="provide master password to generate password",
+						help=_("provide master password to generate password"),
 						type=str)
 	parser.add_argument("-d", "--domain",
-						help="provide domain name to generate password",
+						help=_("provide domain name to generate password"),
 						type=str)
 	parser.add_argument("-i", "--iterations",
-						help="set how many times the hash algorithm iterates over the password string",
+						help=_("set how many times the hash algorithm iterates over the password string"),
 						type=int)
 	parser.add_argument("-s", "--salt",
-						help="set salt",
+						help=_("set salt"),
 						type=str)
 	parser.add_argument("-l", "--length",
-						help="set password length",
+						help=_("set password length"),
 						type=int)
 	args = parser.parse_args()
 
@@ -63,15 +66,15 @@ def main():
 	if args.master_password:
 		master_password = args.master_password
 	else:
-		master_password = getpass('master password: ')
+		master_password = getpass(_('master password: '))
 
 	if args.domain:
 		domain = args.domain
 	else:
-		domain = input('domain: ')
+		domain = input(_('domain: '))
 		while len(domain) < 1:
-			print('Please provide a domain name.')
-			domain = input('domain: ')
+			print(_('Please provide a domain name.'))
+			domain = input(_('domain: '))
 
 	if args.iterations:
 		iterations = args.iterations
@@ -90,9 +93,9 @@ def main():
 		iterations)
 
 	if args.print:
-		print('password: ' + convert_bytes_to_password(hashed_bytes, pw_length))
+		print(_('password: %s') % convert_bytes_to_password(hashed_bytes, pw_length))
 	else:
 		pyperclip.copy(convert_bytes_to_password(hashed_bytes, pw_length))
-		print("Paste your password")
+		print(_("Paste your password"))
 		time.sleep(paste_time)
 		pyperclip.copy("")

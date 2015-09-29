@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2015-09-13 13:02+0200\n"
+"PO-Revision-Date: 2015-09-13 13:06+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:35
+msgid "prints generated password to command line"
+msgstr "gibt das generierte Passwort auf der Kommandozeile aus"
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:37
+msgid "copies generated password to clipboard (default)"
+msgstr "kopiert das generierte Passwort in die Zwischenablage (Standard)"
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:40
+msgid "set time the password is stored in clipboard (default=12s)"
+msgstr "lege fest wie lang das Passwort in der Zwischenablage gespeichert wird (Standard: 12s)"
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:43
+msgid "provide master password to generate password"
+msgstr "gebe Masterpasswort an"
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:46
+msgid "provide domain name to generate password"
+msgstr "gebe Domainname an"
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:49
+msgid "set how many times the hash algorithm iterates over the password string"
+msgstr "lege fest wie oft der Hashalgorithmus über den Passwortstring iteriert"
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:52
+msgid "set salt"
+msgstr "gebe das Hashsalt an"
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:55
+msgid "set password length"
+msgstr "lege die Länge des generierten Passworts fest"
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:66
+msgid "master password: "
+msgstr "Masterpasswort: "
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:71
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:74
+msgid "domain: "
+msgstr "Domain: "
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:73
+msgid "Please provide a domain name."
+msgstr "Bitte gebe eine Domain an."
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:93
+msgid "password: %s"
+msgstr "Passwort: %s"
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:96
+msgid "Paste your password"
+msgstr "Füge dein Passwort an der gewünschten Stelle ein."

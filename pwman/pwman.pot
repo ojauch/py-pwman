@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2015-09-13 12:58+CEST\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:35
+msgid "prints generated password to command line"
+msgstr ""
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:37
+msgid "copies generated password to clipboard (default)"
+msgstr ""
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:40
+msgid "set time the password is stored in clipboard (default=12s)"
+msgstr ""
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:43
+msgid "provide master password to generate password"
+msgstr ""
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:46
+msgid "provide domain name to generate password"
+msgstr ""
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:49
+msgid "set how many times the hash algorithm iterates over the password string"
+msgstr ""
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:52
+msgid "set salt"
+msgstr ""
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:55
+msgid "set password length"
+msgstr ""
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:66
+msgid "master password: "
+msgstr ""
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:71
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:74
+msgid "domain: "
+msgstr ""
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:73
+msgid "Please provide a domain name."
+msgstr ""
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:93
+msgid "password: %s"
+msgstr ""
+
+#: /Users/ojauch/Projects/py-pwman/pwman/pwman.py:96
+msgid "Paste your password"
+msgstr ""
+
