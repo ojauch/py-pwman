@@ -32,7 +32,11 @@ def main():
 	iterations = 4096
 	pw_length = 10
 
-	gettext.install('pwman', 'locale')
+	gettext.bindtextdomain('pwman', './locale')
+	gettext.textdomain('pwman')
+	_ = gettext.gettext
+
+	#gettext.install('pwman', 'locale')
 
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-p", "--print", help=_("prints generated password to command line"),
