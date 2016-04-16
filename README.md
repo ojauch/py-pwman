@@ -3,10 +3,12 @@ This is a modified command line Python version of the c't password manager.
 
 The tool generates from a master password and a domain name a unique password for each service.
 
+## Installation
+To install py-pwman you have to install the python packet manager pip3 and the package setuptools first. Then you can install py-pwman with `sudo pip3 install [PATH_TO_SRC_DIR]`
 To use the tool on Ubuntu you have to install xclip with `sudo apt-get install xclip`.
 
 ## Usage
-python3 py-pwman.py [-h] [-p] [-c] [-t TIME] [-mp MASTER_PASSWORD] [-d DOMAIN]
+pwman [-h] [-p] [-c] [-t TIME] [-mp MASTER_PASSWORD] [-d DOMAIN]
 [-i ITERATIONS] [-s SALT] [-l LENGTH]
 
 optional arguments:
