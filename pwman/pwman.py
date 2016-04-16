@@ -6,7 +6,7 @@
 __version__ = "0.1"
 
 from hashlib import pbkdf2_hmac
-from pyperclip import pyperclip
+import pyperclip
 import time
 import argparse
 from getpass import getpass
